@@ -375,5 +375,19 @@ namespace PBIAnalyzer
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = @"SELECT
+                                OBJECT AS[MEASURE],
+                                EXPRESSION,
+                                REFERENCED_OBJECT AS[MEASURE_REFERENCE],
+                                REFERENCED_EXPRESSION AS[MEASURE_EXPRESSION_REFERENCE]
+                                FROM $SYSTEM.DISCOVER_CALC_DEPENDENCY
+                                WHERE OBJECT_TYPE = 'MEASURE' AND REFERENCED_OBJECT_TYPE = 'MEASURE'";
+
+            // execute query
+            ExecuteQuery(query);
+        }
     }
 }
