@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Playground));
             this.gbButtonControls = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSaveAs = new System.Windows.Forms.Button();
             this.btnMeasureDeps = new System.Windows.Forms.Button();
             this.btnAllStorageQuery = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.cbZoomOptions = new System.Windows.Forms.ComboBox();
             this.gbQueryResult = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.gbButtonControls.SuspendLayout();
             this.gbTableViewer.SuspendLayout();
             this.cmsColumnNode.SuspendLayout();
@@ -73,6 +73,20 @@
             this.gbButtonControls.Size = new System.Drawing.Size(1596, 78);
             this.gbButtonControls.TabIndex = 0;
             this.gbButtonControls.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(516, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(234, 51);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Measure Dependencies";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSaveAs
             // 
@@ -282,24 +296,11 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1130, 847);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(516, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 51);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Measure Dependencies";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Playground
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1596, 925);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.gbTableViewer);

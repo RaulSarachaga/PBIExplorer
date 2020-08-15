@@ -130,7 +130,7 @@ namespace PBIAnalyzer
 
         private void btnAllStorageQuery_Click(object sender, EventArgs e)
         {
-            string query = "SELECT dimension_name AS tablename, attribute_name AS columnname, datatype, (dictionary_size/1024) AS size_kb FROM $system.discover_storage_table_columns WHERE dictionary_size > 0";
+            string query = "SELECT dimension_name AS TABLE_NAME, attribute_name AS COLUMN_NAME, datatype AS DATA_TYPE, (dictionary_size/1024) AS SIZE_KB FROM $system.discover_storage_table_columns WHERE dictionary_size > 0";
 
             // execute query
             ExecuteQuery(query);
@@ -355,8 +355,8 @@ namespace PBIAnalyzer
                 if (WindowState == FormWindowState.Normal)
                 {
                     gbQueryInput.Size = new Size(MIN_GB_INPUT_SIZE_W, MIN_GB_INPUT_SIZE_H);
-                    tbQuery.Size = new Size(MIN_TB_INPUT_SIZE_W, MIN_TB_INPUT_SIZE_H);
-                    tbQuery.relocateWithParent();
+                   // tbQuery.Size = new Size(MIN_TB_INPUT_SIZE_W, MIN_TB_INPUT_SIZE_H);
+                    //tbQuery.relocateWithParent();
                 }
             }   
         }
