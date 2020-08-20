@@ -109,7 +109,7 @@
             this.btnMeasureDeps.Name = "btnMeasureDeps";
             this.btnMeasureDeps.Size = new System.Drawing.Size(234, 51);
             this.btnMeasureDeps.TabIndex = 2;
-            this.btnMeasureDeps.Text = "Measure Dependencies";
+            this.btnMeasureDeps.Text = "All Measures";
             this.btnMeasureDeps.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMeasureDeps.UseVisualStyleBackColor = true;
             this.btnMeasureDeps.Click += new System.EventHandler(this.btnMeasureDeps_Click);
@@ -305,10 +305,11 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.gbTableViewer);
             this.Controls.Add(this.gbButtonControls);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Playground";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Playground";
+            this.Text = "PBI Explorer";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Playground_FormClosed);
             this.Load += new System.EventHandler(this.Playground_Load);
             this.Resize += new System.EventHandler(this.Playground_Resize);

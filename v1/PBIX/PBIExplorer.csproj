@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{72119FA7-CFAA-47CC-8AF7-59482CEEA5ED}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PBIAnalyzer</RootNamespace>
-    <AssemblyName>PBIAnalyzer</AssemblyName>
+    <RootNamespace>PBIExplorer</RootNamespace>
+    <AssemblyName>PBIExplorer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -83,30 +83,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs">
+    <Compile Include="frameMainPBIExplorer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="frameMainPBIExplorer.Designer.cs">
+      <DependentUpon>frameMainPBIExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="MultilineAutocompleteTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Playground.cs">
+    <Compile Include="frameWindowsPBIExplorer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Playground.Designer.cs">
-      <DependentUpon>Playground.cs</DependentUpon>
+    <Compile Include="frameWindowsPBIExplorer.Designer.cs">
+      <DependentUpon>frameWindowsPBIExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DBServer.cs" />
     <Compile Include="Utils.cs" />
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="frameMainPBIExplorer.resx">
+      <DependentUpon>frameMainPBIExplorer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Playground.resx">
-      <DependentUpon>Playground.cs</DependentUpon>
+    <EmbeddedResource Include="frameWindowsPBIExplorer.resx">
+      <DependentUpon>frameWindowsPBIExplorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

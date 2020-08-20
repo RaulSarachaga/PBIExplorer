@@ -320,13 +320,11 @@ namespace PBIAnalyzer
 
         private void btnMeasureDeps_Click(object sender, EventArgs e)
         {
-            string query = @"SELECT
-                                OBJECT AS[MEASURE],
-                                EXPRESSION,
-                                REFERENCED_OBJECT AS[MEASURE_REFERENCE],
-                                REFERENCED_EXPRESSION AS[MEASURE_EXPRESSION_REFERENCE]
-                                FROM $SYSTEM.DISCOVER_CALC_DEPENDENCY
-                                WHERE OBJECT_TYPE = 'MEASURE' AND REFERENCED_OBJECT_TYPE = 'MEASURE'";
+            string query = @"SELECT [MEASUREGROUP_NAME] AS [FOLDER],[MEASURE_CAPTION] AS [MEASURE],
+                            [MEASURE_IS_VISIBLE]
+                            FROM $SYSTEM.MDSCHEMA_MEASURES
+                            WHERE CUBE_NAME  ='Model' AND [MEASURE_CAPTION] <>'__Default measure'
+                            ORDER BY [MEASUREGROUP_NAME] ";
 
             // execute query
             ExecuteQuery(query);

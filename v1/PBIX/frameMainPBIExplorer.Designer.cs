@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.boxDS = new System.Windows.Forms.GroupBox();
             this.cbPorts = new System.Windows.Forms.ComboBox();
             this.btnDataSrc = new System.Windows.Forms.RadioButton();
@@ -105,6 +106,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.boxDS);
             this.Controls.Add(this.btnConnectPort);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Main";
